@@ -30,8 +30,12 @@ class SinglyLinkedList {
   }
 
   pop() {
+    if (!this.head) {
+      return undefined;
+    }
+
     let current = this.head;
-    let newTail;
+    let newTail = current;
 
     while (current.next) {
       newTail = current;
@@ -41,14 +45,22 @@ class SinglyLinkedList {
     this.tail = newTail;
     this.tail.next = null;
 
+    this.length--;
+
     if (this.length === 0) {
       this.head = null;
       this.tail = null;
       return this;
     }
 
-    this.length--;
-
     return current;
   }
 }
+
+let sl = new SinglyLinkedList();
+sl.push(1);
+sl.push(2);
+sl.push(3);
+sl.push(4);
+sl.push(5);
+sl.push(6);
