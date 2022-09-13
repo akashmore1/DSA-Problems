@@ -109,10 +109,24 @@ class SinglyLinkedList {
   }
 
   insert(index, value) {
+    if (index < 0 || index > this.length) return undefined;
+
+    if (index === 0) {
+      this.unshift(value);
+      this.length++;
+      return this;
+    }
+
+    if (index === this.length) {
+      this.push(value);
+      this.length++;
+      return this;
+    }
+
     const newNode = new Node(value);
 
-    const current = get(index);
-    const prev = get(index - 1);
+    const current = this.get(index);
+    const prev = this.get(index - 1);
 
     newNode.next = current;
     prev.next = newNode;
