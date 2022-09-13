@@ -113,13 +113,11 @@ class SinglyLinkedList {
 
     if (index === 0) {
       this.unshift(value);
-      this.length++;
       return this;
     }
 
     if (index === this.length) {
       this.push(value);
-      this.length++;
       return this;
     }
 
@@ -133,6 +131,26 @@ class SinglyLinkedList {
     this.length++;
 
     return this;
+  }
+
+  remove(index) {
+    if (index < 0 || index >= this.length) return undefined;
+
+    if (index === 0) {
+      return this.shift();
+    }
+
+    if (index === this.length - 1) {
+      return this.pop();
+    }
+
+    const prev = this.get(index);
+    const current = this.get(index);
+    prev.next = current.next;
+    current.next = null;
+
+    this.length--;
+    return current;
   }
 }
 
