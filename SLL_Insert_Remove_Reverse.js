@@ -107,6 +107,19 @@ class SinglyLinkedList {
     let node = this.get(index);
     node.val = value;
   }
+
+  insert(index, value) {
+    const newNode = new Node(value);
+
+    const current = get(index);
+    const prev = get(index - 1);
+
+    newNode.next = current;
+    prev.next = newNode;
+    this.length++;
+
+    return this;
+  }
 }
 
 let sl = new SinglyLinkedList();
