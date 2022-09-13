@@ -152,6 +152,11 @@ class SinglyLinkedList {
     this.length--;
     return current;
   }
+
+  reverse() {
+    // We will need prev, current, next nodes
+    // Iteratively we will point current to prev then next to current
+  }
 }
 
 let sl = new SinglyLinkedList();
