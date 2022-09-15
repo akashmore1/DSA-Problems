@@ -13,14 +13,21 @@ const swap = (arr, index1, index2) => {
 };
 
 const bubbleSort = (nums) => {
+  let noSwap;
   for (let i = nums.length - 1; i >= 0; i--) {
+    noSwap = true;
     for (let j = 0; j < nums.length; j++) {
+      console.log(nums[j], nums[j + 1]);
       if (nums[j] > nums[j + 1]) {
         swap(nums, j, j + 1);
+        noSwap = false;
       }
+    }
+    if (noSwap) {
+      break;
     }
   }
   return nums;
 };
 
-console.log(bubbleSort([3, 2, 1, 4, 9, -3, 2, 0, 99]));
+console.log(bubbleSort([8, 1, 2, 3, 4, 5, 6, 7]));
