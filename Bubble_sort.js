@@ -5,6 +5,7 @@
 1. compare two ajacent element of array from start.
 2. if first element is greater than second then swap them
 3. repeat this process until whole array is sorted.
+4. For nearly sorted array, to avoid extra swaps we maintain extra variable noSwap: if(true) break loop
 */
 
 const swap = (arr, index1, index2) => {
