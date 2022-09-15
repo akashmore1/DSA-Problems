@@ -31,3 +31,7 @@ const bubbleSort = (nums) => {
 };
 
 console.log(bubbleSort([8, 1, 2, 3, 4, 5, 6, 7]));
+
+// Time complexity Big O of bubble sort:
+// In general time complexity of bubble sort in O(n^2);
+// But when array is nearly sorted time complexity is good, O(n)
