@@ -6,7 +6,7 @@
 // Leetcode link: https://leetcode.com/problems/find-if-path-exists-in-graph/description/
 
 // Solve with recursion
-
+// DFS Algorithm
 var validPath = function (n, edges, start, end) {
   if (!n) {
     return false;
