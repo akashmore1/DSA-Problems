@@ -4,6 +4,9 @@
 
 // Given edges and the integers n, source, and destination, return true if there is a valid path from source to destination, or false otherwise.
 // Leetcode link: https://leetcode.com/problems/find-if-path-exists-in-graph/description/
+
+// Solve with recursion
+
 var validPath = function (n, edges, start, end) {
   if (!n) {
     return false;
